@@ -209,3 +209,45 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 * {
   direction: rtl;
 }
+@font-face {
+  font-family: Vazir;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Regular.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Regular.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Regular.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Bold.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Bold.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Bold.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Black.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Black.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Black.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Black.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Medium.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Medium.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Medium.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Medium.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Light.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Light.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Light.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Light.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Thin.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Thin.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Thin.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Thin.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/Vazir-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
