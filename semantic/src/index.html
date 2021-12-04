@@ -9,7 +9,7 @@
 
   <!-- Site Properties -->
   <title>Web Dev - HW2</title>
-  <!-- <link rel="stylesheet" type="text/css" href="../dist/semantic.rtl.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="../dist/semantic.rtl.min.css">
 
   <link rel="stylesheet" type="text/css" href="../dist/components/reset.rtl.min.css">
   <link rel="stylesheet" type="text/css" href="../dist/components/site.rtl.min.css">
@@ -88,13 +88,83 @@
       padding: 5em 0em;
     }
 
+    .ui.fixed.menu .toc.item {
+        display: none;
+      }
+
     .secondary.pointing.menu .toc.item {
       display: none;
     }
+    
+    .navdiv {
+      padding-top: 0px !important;
+      padding-bottom: 5px !important;
+    }
 
-    @media only screen and (max-width: 700px) {
-      .ui.fixed.menu {
+    .logo {
+      background: url('assets/images/multi_logo_200x200.png'); 
+      background-position-x: -136px;
+      background-position-y: -63px;
+      width: 50px;
+      height: 75px !important; 
+      transform: scale(0.5);
+      transform-origin: top;
+      object-fit: cover;
+    }
+
+    .inverted.logo {
+      background: url('assets/images/red_logo_200x200.png'); 
+      background-position-x: -136px;
+      background-position-y: -63px;
+      width: 50px;
+      height: 75px !important; 
+      transform: scale(0.5);
+      transform-origin: top;
+      object-fit: cover;
+    }
+  
+    .ui.logo-container {
+      width: 25px !important;
+      height: 37.5px !important;
+    }
+
+    .text-logo {
+      background: url('assets/images/red_logo_200x200.png'); 
+      background-position-x: 0px;
+      background-position-y: -90px;
+      width: 140px;
+      height: 75px !important; 
+      transform: scale(1);
+      transform-origin: top;
+      object-fit: cover;
+    }
+
+    .inverted.text-logo {
+      background: url('assets/images/red_logo_200x200.png'); 
+      background-position-x: 0px;
+      background-position-y: -90px;
+      width: 140px;
+      height: 75px !important; 
+      transform: scale(1);
+      transform-origin: top;
+      object-fit: cover;
+    }
+  
+    .ui.text-logo-container {
+      width: 140px !important;
+      height: 37.5px !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* .ui.fixed.menu {
         display: none !important;
+      } */
+      .ui.fixed.menu .item,
+      .ui.fixed.menu .menu {
+        display: none;
+      }
+      .ui.fixed.menu .toc.item {
+        display: block;
       }
       .secondary.pointing.menu .item,
       .secondary.pointing.menu .menu {
@@ -133,7 +203,7 @@
           once: false,
           onBottomPassed: function() {
             $('.fixed.menu').transition('fade in');
-          },
+          }, 
           onBottomPassedReverse: function() {
             $('.fixed.menu').transition('fade out');
           }
@@ -145,29 +215,19 @@
         .sidebar('attach events', '.toc.item')
       ;
 
+      // go dark
+      $('.darken')
+        .bind('click',function(){
+          $('*').toggleClass('inverted');
+        })
+      ;
     })
   ;
   </script>
 </head>
 <body>
 
-<!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
-  <div class="ui container">
-    <a class="active item">بخش اول</a>
-    <a class="item">بخش دوم</a>
-    <a class="item">بخش سوم</a>
-    <a class="item">بخش چهارم</a>
-    <div class="left menu">
-      <div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
@@ -175,27 +235,64 @@
   <a class="item">بخش دوم</a>
   <a class="item">بخش سوم</a>
   <a class="item">بخش چهارم</a>
-  <a class="item">Login</a>
-  <a class="item">Signup</a>
+  <div class="ui horizontal inverted menu"> 
+    <div class="ui logo-container">
+      <div class="logo"></div>
+    </div>
+    <div class="ui text-logo-container">
+      <div class="text-logo"></div>
+    </div>
+  </div>
 </div>
 
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui dark container">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <a class="active item">بخش اول</a>
+    <a class="item">بخش دوم</a>
+    <a class="item">بخش سوم</a>
+    <a class="item">بخش چهارم</a>
+    <div class="right item">
+      <a class="ui circular icon darken button">
+        <i class="moon outline icon"></i>
+      </a>
+      <div class="ui logo-container">
+        <div class="logo"></div>
+      </div>
+      <div class="ui text-logo-container">
+        <div class="text-logo"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Page Contents -->
 <div class="pusher">
   <div class="ui inverted vertical masthead center aligned segment">
 
+    <!-- Nav Bar -->
     <div class="ui container">
       <div class="ui large secondary inverted pointing menu">
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">بخش اول</a>
-        <a class="item">بخش دوم</a>
-        <a class="item">بخش سوم</a>
-        <a class="item">بخش چهارم</a>
-        <div class="right item">
-          <a class="ui inverted button">Log in</a>
-          <a class="ui inverted button">Sign Up</a>
+        <a class="active item" href="#first-section">بخش اول</a>
+        <a class="item" href="#second-section">بخش دوم</a>
+        <a class="item" href="#third-section">بخش سوم</a>
+        <a class="item" href="#fourth-section">بخش چهارم</a>
+        <div class="right item navdiv">
+          <a class="ui inverted circular icon darken button">
+            <i class="moon outline icon"></i>
+          </a>
+          <div class="ui logo-container">
+            <div class="logo"></div>
+          </div>
+          <div class="ui text-logo-container">
+            <div class="text-logo"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -242,7 +339,7 @@
         <div class="column">
           <h3>"I shouldn't have gone with their competitor."</h3>
           <p>
-            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar logo image"> <b>Nan</b> Chief Fun Officer Acme Toys
           </p>
         </div>
       </div>
