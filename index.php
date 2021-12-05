@@ -1,1 +1,4 @@
-<?php include_once("./semantic/src/index.html"); ?>
+<?php 
+	chroot("./semantic/front/");
+	include_once("index.html"); 
+?>
