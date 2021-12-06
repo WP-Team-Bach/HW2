@@ -1,167 +1,243 @@
+
+.fixed.menu {
+  border-bottom: 2px solid gray !important;
+}
+
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: fit-content;
+  color: white !important;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to right, #86377b 20%, blue 140%);
+}
+
+.ui.container.content {
+  z-index: 2;
+  position: absolute;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+
+
+.mblack, .mblack > *{
+  background-color: black !important;
+  color: white !important;
+}
+
+.mwhite {
+  background-color: white !important;
+  color: black !important;
+}
+
+.mdark {
+  background-color: rgba(128, 128, 128, 0.459) !important;
+  color: white !important;
+}
+
 .hidden.menu {
+  display: none;
+}
+
+.ui.fixed .right.item .ui.button {
+  margin-left: 0.5em;
+}
+
+.sidebar .horizontal.menu {
+  padding: 13px 16px;
+}
+
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+}
+
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+
+.ui.vertical.stripe .button+h3,
+.ui.vertical.stripe p+h3 {
+  margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+.ui.fixed.menu .toc.item {
+  display: none;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+.navdiv {
+  padding-top: 0px !important;
+  padding-bottom: 5px !important;
+}
+
+.logo {
+  background: url('assets/images/multi_logo_200x200.png');
+  background-position-x: -136px;
+  background-position-y: -63px;
+  width: 50px;
+  height: 75px !important;
+  transform: scale(0.5);
+  transform-origin: top right;
+  object-fit: cover;
+}
+
+.inverted.logo {
+  background: url('assets/images/red_logo_200x200.png');
+  background-position-x: -136px;
+  background-position-y: -63px;
+  width: 50px;
+  height: 75px !important;
+  transform: scale(0.5);
+  transform-origin: top right;
+  object-fit: cover;
+}
+
+.ui.logo-container {
+  width: 25px !important;
+  height: 37.5px !important;
+}
+
+.text-logo {
+  background: url('assets/images/red_logo_200x200.png');
+  background-position-x: 0px;
+  background-position-y: -90px;
+  width: 140px;
+  height: 50px !important;
+  transform: scale(1);
+  transform-origin: top;
+  object-fit: cover;
+}
+
+.inverted.text-logo {
+  background: url('assets/images/red_logo_200x200.png');
+  background-position-x: 0px;
+  background-position-y: -90px;
+  width: 140px;
+  height: 75px !important;
+  transform: scale(1);
+  transform-origin: top;
+  object-fit: cover;
+}
+
+.ui.text-logo-container {
+  width: 140px !important;
+  height: 37.5px !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  /* .ui.fixed.menu {
+      display: none !important;
+    } */
+  .ui.fixed.menu .item,
+  .ui.fixed.menu .menu {
     display: none;
-  }
-
-  .ui.fixed .right.item .ui.button {
-    margin-left: 0.5em;
-  }
-
-  .sidebar .horizontal.menu {
-    padding: 13px 16px;
-  }
-
-  .masthead.segment {
-    min-height: 700px;
-    padding: 1em 0em;
-  }
-  .masthead .logo.item img {
-    margin-right: 1em;
-  }
-  .masthead .ui.menu .ui.button {
-    margin-left: 0.5em;
-  }
-  .masthead h1.ui.header {
-    margin-top: 3em;
-    margin-bottom: 0em;
-    font-size: 4em;
-    font-weight: normal;
-  }
-  .masthead h2 {
-    font-size: 1.7em;
-    font-weight: normal;
-  }
-
-  .ui.vertical.stripe {
-    padding: 8em 0em;
-  }
-  .ui.vertical.stripe h3 {
-    font-size: 2em;
-  }
-  .ui.vertical.stripe .button + h3,
-  .ui.vertical.stripe p + h3 {
-    margin-top: 3em;
-  }
-  .ui.vertical.stripe .floated.image {
-    clear: both;
-  }
-  .ui.vertical.stripe p {
-    font-size: 1.33em;
-  }
-  .ui.vertical.stripe .horizontal.divider {
-    margin: 3em 0em;
-  }
-
-  .quote.stripe.segment {
-    padding: 0em;
-  }
-  .quote.stripe.segment .grid .column {
-    padding-top: 5em;
-    padding-bottom: 5em;
-  }
-
-  .footer.segment {
-    padding: 5em 0em;
   }
 
   .ui.fixed.menu .toc.item {
-      display: none;
-    }
+    display: block;
+  }
 
-  .secondary.pointing.menu .toc.item {
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
     display: none;
   }
-  
-  .navdiv {
-    padding-top: 0px !important;
-    padding-bottom: 5px !important;
+
+  .secondary.pointing.menu .toc.item {
+    display: block;
   }
 
-  .logo {
-    background: url('assets/images/multi_logo_200x200.png'); 
-    background-position-x: -136px;
-    background-position-y: -63px;
-    width: 50px;
-    height: 75px !important; 
-    transform: scale(0.5);
-    transform-origin: top right;
-    object-fit: cover;
+  .masthead.segment {
+    min-height: 350px;
   }
 
-  .inverted.logo {
-    background: url('assets/images/red_logo_200x200.png'); 
-    background-position-x: -136px;
-    background-position-y: -63px;
-    width: 50px;
-    height: 75px !important; 
-    transform: scale(0.5);
-    transform-origin: top right;
-    object-fit: cover;
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
   }
 
-  .ui.logo-container {
-    width: 25px !important;
-    height: 37.5px !important;
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
   }
 
-  .text-logo {
-    background: url('assets/images/red_logo_200x200.png'); 
-    background-position-x: 0px;
-    background-position-y: -90px;
-    width: 140px;
-    height: 75px !important; 
-    transform: scale(1);
-    transform-origin: top;
-    object-fit: cover;
+  .masthead .ui.container {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
   }
-
-  .inverted.text-logo {
-    background: url('assets/images/red_logo_200x200.png'); 
-    background-position-x: 0px;
-    background-position-y: -90px;
-    width: 140px;
-    height: 75px !important; 
-    transform: scale(1);
-    transform-origin: top;
-    object-fit: cover;
-  }
-
-  .ui.text-logo-container {
-    width: 140px !important;
-    height: 37.5px !important;
-  }
-
-  @media only screen and (max-width: 600px) {
-    /* .ui.fixed.menu {
-      display: none !important;
-    } */
-    .ui.fixed.menu .item,
-    .ui.fixed.menu .menu {
-      display: none;
-    }
-    .ui.fixed.menu .toc.item {
-      display: block;
-    }
-    .secondary.pointing.menu .item,
-    .secondary.pointing.menu .menu {
-      display: none;
-    }
-    .secondary.pointing.menu .toc.item {
-      display: block;
-    }
-    .masthead.segment {
-      min-height: 350px;
-    }
-    .masthead h1.ui.header {
-      font-size: 2em;
-      margin-top: 1.5em;
-    }
-    .masthead h2 {
-      margin-top: 0.5em;
-      font-size: 1.5em;
-    }
-
-    .masthead .ui.container {
-      margin-left: 0em !important;
-      margin-right: 0em !important;
-    }
-  }
+}

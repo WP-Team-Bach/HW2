@@ -6,10 +6,10 @@ $(document)
     .visibility({
       once: false,
       onBottomPassed: function() {
-        $('.fixed.menu').transition('fade in');
+        $('.fixed.menu')//.toggleClass("inverted");
       }, 
       onBottomPassedReverse: function() {
-        $('.fixed.menu').transition('fade out');
+        $('.fixed.menu')//.toggleClass("inverted");
       }
     })
   ;
@@ -22,8 +22,10 @@ $(document)
   // go dark
   $('.darken')
     .bind('click',function(){
-      $('*').toggleClass('inverted');
+      $('*').not('.button').toggleClass('inverted');
     })
   ;
+
+  
 })
 ;
