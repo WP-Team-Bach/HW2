@@ -1,4 +1,4 @@
-html { padding-top: 68px !important; }
+html { padding-top: 68px !important;}
 
 .fixed.menu {
   border-bottom: 2px solid gray !important;
@@ -42,29 +42,54 @@ html { padding-top: 68px !important; }
   background-size: 50% 100px;
 }
 
-.wave-image, .mdark .wave-image {
+.mwhite .wave-image {
   background-image: url('assets/images/wave-bot.png');
+  transition: all 0.5s ease !important;
 }
 
-.mdark .wave-image {
+.wave-image, .mdark .wave-image {
   background-image: url('assets/images/wave-bot-dark.png');
+  transition: all 0.5s ease !important;
 }
 
-.mblack, .mblack * :not(a, .button, .masthead *, .footer *, .fixed *) {
+.mblack {
   background-color: black !important;
   color: white !important;
+  border-color: gray !important;
+  transition: all 0.5s ease !important;
 }
 
-.mwhite, .mwhite * :not(a, .button, .masthead *, .footer *, .fixed *) {
+.mwhite{
   background-color: white !important;
   color: black !important;
+  transition: all 0.5s ease !important;
 }
 
-.mdark, .mdark * :not(a, .button, .masthead *, .footer *, .fixed *) {
+.mdark {
   background-color: #555555 !important;
   color: white !important;
+  transition: all 0.5s ease !important;
+}
+
+.mdark * {
   border-color: gray !important;
-  border: none;
+}
+
+.mdark * :not(a, .button, .masthead *, .footer *, .fixed *)  {
+  background-color: unset !important;
+  color: unset !important;
+  border-color: gray !important;
+}
+
+.mblack * :not(a, .button, .masthead *, .footer *, .fixed *)  {
+  background-color: unset !important;
+  color: unset !important;
+  border-color: gray !important;
+}
+
+.mwhite * :not(a, .button, .masthead *, .footer *, .fixed *)  {
+  background-color: unset !important;
+  color: unset !important;
 }
 
 .hidden.menu {
