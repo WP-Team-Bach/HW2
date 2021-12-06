@@ -23,8 +23,7 @@ $(document)
   $('.darken')
     .bind('click',function(){
       $('.mdark, .mwhite').toggleClass('mdark mwhite');
-    })
-  ;
+    });
 
   
 })

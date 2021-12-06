@@ -1,3 +1,4 @@
+html { padding-top: 68px !important; }
 
 .fixed.menu {
   border-bottom: 2px solid gray !important;
@@ -49,17 +50,17 @@
   background-image: url('assets/images/wave-bot-dark.png');
 }
 
-.mblack, .mblack * :not(a, .button, .masthead *) {
+.mblack, .mblack * :not(a, .button, .masthead *, .footer *, .fixed *) {
   background-color: black !important;
   color: white !important;
 }
 
-.mwhite, .mwhite * :not(a, .button, .masthead *) {
+.mwhite, .mwhite * :not(a, .button, .masthead *, .footer *, .fixed *) {
   background-color: white !important;
   color: black !important;
 }
 
-.mdark, .mdark * :not(a, .button, .masthead *) {
+.mdark, .mdark * :not(a, .button, .masthead *, .footer *, .fixed *) {
   background-color: #555555 !important;
   color: white !important;
   border-color: gray !important;
