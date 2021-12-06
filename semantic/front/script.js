@@ -22,7 +22,7 @@ $(document)
   // go dark
   $('.darken')
     .bind('click',function(){
-      $('*').not('.button').toggleClass('inverted');
+      $('.mdark, .mwhite').toggleClass('mdark mwhite');
     })
   ;
 

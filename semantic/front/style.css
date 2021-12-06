@@ -12,7 +12,7 @@
   top: 0;
   margin: auto;
   height: fit-content;
-  color: white !important;
+  border: none !important;
 }
 .waveWrapperInner {
   position: absolute;
@@ -41,20 +41,29 @@
   background-size: 50% 100px;
 }
 
+.wave-image, .mdark .wave-image {
+  background-image: url('assets/images/wave-bot.png');
+}
 
-.mblack, .mblack > *{
+.mdark .wave-image {
+  background-image: url('assets/images/wave-bot-dark.png');
+}
+
+.mblack, .mblack * :not(a, .button, .masthead *) {
   background-color: black !important;
   color: white !important;
 }
 
-.mwhite {
+.mwhite, .mwhite * :not(a, .button, .masthead *) {
   background-color: white !important;
   color: black !important;
 }
 
-.mdark {
-  background-color: rgba(128, 128, 128, 0.459) !important;
+.mdark, .mdark * :not(a, .button, .masthead *) {
+  background-color: #555555 !important;
   color: white !important;
+  border-color: gray !important;
+  border: none;
 }
 
 .hidden.menu {
