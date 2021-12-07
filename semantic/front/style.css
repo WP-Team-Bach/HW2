@@ -24,7 +24,7 @@ html {
   overflow: hidden;
   height: 100%;
   bottom: -1px;
-  background-image: linear-gradient(to right, #86377b 20%, blue 140%);
+  background-image: linear-gradient(to right, #fc466b, #3f5efb);
 }
 
 .ui.container.content {
@@ -71,7 +71,7 @@ html {
 }
 
 .mdark {
-  background-color: #555555 !important;
+  background-color: #313131 !important;
   color: white !important;
   transition: all 0.5s ease !important;
 }
@@ -252,7 +252,7 @@ html {
 }
 
 .card-header {
-  background-color: cornflowerblue !important;
+  background-color: #667fff !important;
   padding: 5%;
 }
 
@@ -261,7 +261,7 @@ html {
 }
 
 .important .card-header {
-  background-color: hotpink !important;
+  background-color: #fc6986 !important;
 }
 
 .important .card {
