@@ -92,19 +92,19 @@ html {
   --excluded: a, .button, .masthead *, .footer *, .fixed *, .mcard, .card *;
 }
 
-.mdark * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *) {
+.mdark * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *, .mcell *, .mcell) {
   background-color: unset !important;
   color: unset !important;
   border-color: gray !important;
 }
 
-.mblack * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *) {
+.mblack * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *, .mcell *, .mcell) {
   background-color: unset !important;
   color: unset !important;
   border-color: gray !important;
 }
 
-.mwhite * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *) {
+.mwhite * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *, .mcell *, .mcell) {
   background-color: unset !important;
   color: unset !important;
 }
@@ -303,18 +303,47 @@ html {
 }
 
 .column .mcell {
-  padding: 20px !important;
+  color: black;
   border-radius: 5px;
-  margin: 200px !important;
-  background-color: #444444 !important;
-  margin: 0px !important;
+  overflow: hidden;
+  align-content: space-around;
+}
+
+img.mcell {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.mgrid .two.column .mcell {
+  height: 400px !important;
+}
+
+.mgrid .three.column .mcell {
+  height: 300px !important;
+}
+
+.mdesc {
+  color: white !important;
+  background-color: black !important;
+  padding: 10% !important;
+  width: calc(100% - 28px) !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0px;
+  left: 14px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdesc:hover {
+  opacity: 0.8;
 }
 
 .mwhite .column .mcell {
-  padding: 20px !important;
   border-radius: 5px;
   margin: 200px !important;
-  background-color: whitesmoke !important;
   margin: 0px !important;
 }
 
