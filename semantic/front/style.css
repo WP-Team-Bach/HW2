@@ -2,6 +2,10 @@ html {
   padding-top: 65px !important;
 }
 
+.footer{
+  margin-top: 10% !important;
+}
+
 * {
   text-align: justify !important;
 }
@@ -320,6 +324,45 @@ html {
   padding: 30px !important;
   max-width: 1200px !important;
 }
+
+.mactivity {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 30px !important;
+  max-width: 900px !important;
+}
+
+.mactivity .column {
+  padding: 30px !important;
+}
+
+.mact {
+  margin: 30px !important;
+}
+
+.mimg {
+  position: absolute !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px !important;
+  width: 150px !important;
+  height: 150px !important;
+  transition: all 0.5s ease !important;
+}
+
+.mimg:hover {
+  z-index: 0 !important;
+  
+}
+
+.mimgh {
+  opacity: 0;
+  transition: all 0.5s ease !important;
+}
+
+.mimgh:hover {
+  opacity: 1;
+  z-index: 1 !important;
+}
+
 
 @media only screen and (max-width: 600px) {
 
