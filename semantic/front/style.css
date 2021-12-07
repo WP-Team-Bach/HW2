@@ -81,35 +81,23 @@ html {
 }
 
 :root {
-  --excluded: a, .button, .masthead *, .footer *, .fixed *, .card, .card *;
+  --excluded: a, .button, .masthead *, .footer *, .fixed *, .mcard, .card *;
 }
 
-.mdark * :not(var(--excluded)) {
+.mdark * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *) {
   background-color: unset !important;
   color: unset !important;
   border-color: gray !important;
 }
 
-.mblack * :not(var(--excluded)) {
+.mblack * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *) {
   background-color: unset !important;
   color: unset !important;
   border-color: gray !important;
 }
 
-.mwhite * :not(var(--excluded)) {
+.mwhite * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *) {
   background-color: unset !important;
-  color: unset !important;
-}
-
-.mdark .header :not(var(--excluded)) {
-  color: unset !important;
-}
-
-.mblack .header :not(var(--excluded))  {
-  color: unset !important;
-}
-
-.mwhite .header :not(var(--excluded)) {
   color: unset !important;
 }
 
