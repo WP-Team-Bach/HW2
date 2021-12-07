@@ -2,6 +2,10 @@ html {
   padding-top: 65px !important;
 }
 
+* {
+  text-align: justify !important;
+}
+
 .fixed.menu {
   border-bottom: 2px solid gray !important;
 }
@@ -262,25 +266,59 @@ html {
 
 .important .card-header {
   background-color: #fc6986 !important;
+  transition: all 0.5s ease !important;
 }
 
-.important .card {
+.card {
   box-sizing: content-box !important;
-  height: 100% !important;
+  height: calc(100% + 20px) !important;
+  transition: all 0.5s ease !important;
+}
+
+* {
+  font-size: 100%;
 }
 
 .mcards .column {
-  padding: 15px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-size: calc(100%);
 }
 
-.mcards .column.important {
-  padding: 0 !important;
+.mcards .column:hover {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: all 0.5s ease !important;
 }
 
 .mcards {
   max-width: 1000px !important;
   height: max-content !important;
   margin-bottom: 40px !important;
+  margin-top: 80px !important;
+}
+
+.column .mcell {
+  padding: 20px !important;
+  border-radius: 5px;
+  margin: 200px !important;
+  background-color: #444444 !important;
+  margin: 0px !important;
+}
+
+.mwhite .column .mcell {
+  padding: 20px !important;
+  border-radius: 5px;
+  margin: 200px !important;
+  background-color: whitesmoke !important;
+  margin: 0px !important;
+}
+
+.mgrid {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 30px !important;
+  max-width: 1200px !important;
 }
 
 @media only screen and (max-width: 600px) {
