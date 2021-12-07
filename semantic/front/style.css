@@ -1,4 +1,6 @@
-html { padding-top: 65px !important;}
+html {
+  padding-top: 65px !important;
+}
 
 .fixed.menu {
   border-bottom: 2px solid gray !important;
@@ -15,6 +17,7 @@ html { padding-top: 65px !important;}
   height: fit-content;
   border: none !important;
 }
+
 .waveWrapperInner {
   position: absolute;
   width: 100%;
@@ -38,6 +41,7 @@ html { padding-top: 65px !important;}
   background-position: 0 bottom;
   transform-origin: center bottom;
 }
+
 .waveBottom {
   background-size: 50% 100px;
 }
@@ -47,7 +51,8 @@ html { padding-top: 65px !important;}
   transition: all 0.5s ease !important;
 }
 
-.wave-image, .mdark .wave-image {
+.wave-image,
+.mdark .wave-image {
   background-image: url('assets/images/wave-bot-dark.png');
   transition: all 0.5s ease !important;
 }
@@ -59,7 +64,7 @@ html { padding-top: 65px !important;}
   transition: all 0.5s ease !important;
 }
 
-.mwhite{
+.mwhite {
   background-color: white !important;
   color: black !important;
   transition: all 0.5s ease !important;
@@ -75,20 +80,36 @@ html { padding-top: 65px !important;}
   border-color: gray !important;
 }
 
-.mdark * :not(a, .button, .masthead *, .footer *, .fixed *)  {
+:root {
+  --excluded: a, .button, .masthead *, .footer *, .fixed *, .card, .card *;
+}
+
+.mdark * :not(var(--excluded)) {
   background-color: unset !important;
   color: unset !important;
   border-color: gray !important;
 }
 
-.mblack * :not(a, .button, .masthead *, .footer *, .fixed *)  {
+.mblack * :not(var(--excluded)) {
   background-color: unset !important;
   color: unset !important;
   border-color: gray !important;
 }
 
-.mwhite * :not(a, .button, .masthead *, .footer *, .fixed *)  {
+.mwhite * :not(var(--excluded)) {
   background-color: unset !important;
+  color: unset !important;
+}
+
+.mdark .header :not(var(--excluded)) {
+  color: unset !important;
+}
+
+.mblack .header :not(var(--excluded))  {
+  color: unset !important;
+}
+
+.mwhite .header :not(var(--excluded)) {
   color: unset !important;
 }
 
@@ -232,6 +253,46 @@ html { padding-top: 65px !important;}
 .ui.text-logo-container {
   width: 140px !important;
   height: 37.5px !important;
+}
+
+.card {
+  background-color: whitesmoke !important;
+  color: white !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px !important;
+  margin: 1.5% !important;
+  display: flex;
+}
+
+.card-header {
+  background-color: cornflowerblue !important;
+  padding: 5%;
+}
+
+.card-header .header {
+  color: white !important;
+}
+
+.important .card-header {
+  background-color: hotpink !important;
+}
+
+.important .card {
+  box-sizing: content-box !important;
+  height: 100% !important;
+}
+
+.mcards .column {
+  padding: 15px !important;
+}
+
+.mcards .column.important {
+  padding: 0 !important;
+}
+
+.mcards {
+  max-width: 1000px !important;
+  height: max-content !important;
+  margin-bottom: 40px !important;
 }
 
 @media only screen and (max-width: 600px) {
