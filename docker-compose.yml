@@ -1,0 +1,8 @@
+services:
+        nginx:
+                image: nginx
+                volumes:
+                        - ./nginx/conf.d:/etc/nginx/conf.d
+                        - ./semantic/front:/usr/share/nginx/html
+                ports:
+                        - "80:80"
