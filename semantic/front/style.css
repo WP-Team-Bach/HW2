@@ -538,6 +538,9 @@ img.mcell {
   opacity: 0;
 }
 
+.news.container {
+  background-color: #F4C026 !important;
+}
 
 
 @media only screen and (max-width: 600px) {
