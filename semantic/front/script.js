@@ -24,23 +24,58 @@ $(document)
         ntm();
       });
 
-     $('.slides .right')
-      .on('click', function() {
-        $('.slide')
-          .siblings('.active:not(:last-of-type)') 
+    $('.slides.gal .right')
+      .on('click', function () {
+        $('.gal .slide')
+          .siblings('.active:not(:last-of-type)')
           .removeClass('active')
           .next()
           .addClass('active');
-});
+      });
 
-      $('.slides .left')
-        .on('click', function() {
-          $('.slide')
-            .siblings('.active:not(:first-of-type)')
-            .removeClass('active')
-            .prev()
-            .addClass('active');
-});
- 
+    $('.slides.gal .left')
+      .on('click', function () {
+        $('.gal .slide')
+          .siblings('.active:not(:first-of-type)')
+          .removeClass('active')
+          .prev()
+          .addClass('active');
+      });
+
+    $('.slides.cms .right')
+      .on('click', function () {
+        $('.cms .slide')
+          .siblings('.active:not(:last-of-type)')
+          .removeClass('active')
+          .next()
+          .addClass('active');
+      });
+
+    $('.slides.cms .left')
+      .on('click', function () {
+        $('.cms .slide')
+          .siblings('.active:not(:first-of-type)')
+          .removeClass('active')
+          .prev()
+          .addClass('active');
+      });
+
+    
+
+    setInterval(() => {
+      let nx = $('.cms .slide')
+        .siblings('.active:not(:last-of-type)')
+        .removeClass('active')
+        .next()
+
+      if (nx.length == 0) {
+        nx = $('.cms .slide:first-of-type')
+      }
+
+      nx.addClass('active');
+
+      
+      return true
+    }, 2000)
 
   });
