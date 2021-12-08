@@ -84,12 +84,8 @@ html {
   transition: all 0.5s ease !important;
 }
 
-.mdark * {
+.mdark * :not(.mcontact, .mcontact *) {
   border-color: gray !important;
-}
-
-:root {
-  --excluded: a, .button, .masthead *, .footer *, .fixed *, .mcard, .card *;
 }
 
 .mdark * :not(a, .button, .masthead *, .footer *, .fixed *, .card, .card *, .mcell *, .mcell) {
@@ -251,7 +247,7 @@ html {
   height: 37.5px !important;
 }
 
-.card {
+.mcards .card {
   background-color: whitesmoke !important;
   color: white !important;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px !important;
@@ -259,21 +255,21 @@ html {
   display: flex;
 }
 
-.card-header {
+.mcards .card-header {
   background-color: #667fff !important;
   padding: 5%;
 }
 
-.card-header .header {
+.mcards .card-header .header {
   color: white !important;
 }
 
-.important .card-header {
+.mcards .important .card-header {
   background-color: #fc6986 !important;
   transition: all 0.5s ease !important;
 }
 
-.card {
+.mcards .card {
   box-sizing: content-box !important;
   height: calc(100% + 20px) !important;
   transition: all 0.5s ease !important;
@@ -286,7 +282,6 @@ html {
 .mcards .column {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  font-size: calc(100%);
 }
 
 .mcards .column:hover {
@@ -305,8 +300,7 @@ html {
 .column .mcell {
   color: black;
   border-radius: 5px;
-  overflow: hidden;
-  align-content: space-around;
+  overflow: hidden !important;
 }
 
 img.mcell {
@@ -335,6 +329,7 @@ img.mcell {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden !important;
 }
 
 .mdesc:hover {
@@ -391,6 +386,76 @@ img.mcell {
   opacity: 1;
   z-index: 1 !important;
 }
+
+.mcontact {
+  margin-top: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 30px !important;
+  max-width: 900px !important;
+}
+
+.mcontact, .mcontact * {
+  border: hidden !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+
+.mcontact .card {
+  background-color: unset !important;
+  color: white !important;
+  margin: 0 !important;
+}
+
+.mcontact .card>.content{
+  background-color: #454545 !important;
+  padding: 5%;
+}
+
+.mcontact .card-header {
+  background-color: unset !important;
+}
+
+.msocial {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.msocial-icons .fa {
+  float: left;
+  clear: both;
+  font-size:64px;
+  margin:20px;
+  transition: all 0.5s ease !important;
+}
+
+:root {
+  --bg: 0px;
+}
+
+.msocial-text {
+  font-size: 48px;
+}
+
+.msocial-text span {
+  float: right;
+  clear: both;
+  transition: all 0.5s ease !important;
+}
+
+.msocial-text span:hover {
+  margin-bottom: 15px;
+  
+}
+
+
+.msocial-icons .fa:hover {
+  color: #f4c026;
+}
+
+
+
 
 
 @media only screen and (max-width: 600px) {
