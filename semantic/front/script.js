@@ -24,5 +24,23 @@ $(document)
         ntm();
       });
 
+     $('.slides .right')
+      .on('click', function() {
+        $('.slide')
+          .siblings('.active:not(:last-of-type)') 
+          .removeClass('active')
+          .next()
+          .addClass('active');
+});
+
+      $('.slides .left')
+        .on('click', function() {
+          $('.slide')
+            .siblings('.active:not(:first-of-type)')
+            .removeClass('active')
+            .prev()
+            .addClass('active');
+});
+ 
 
   });
